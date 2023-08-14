@@ -1,0 +1,6 @@
+<h2>Profile</h2>
+<p>Welcome, {{ request.user.username }}!</p>
+<img src="{{ request.user.userprofile.image.url }}" alt="Profile Picture">
+<p>Description: {{ request.user.userprofile.description }}</p>
+<p>Website: <a href="{{ request.user.userprofile.website }}">{{ request.user.userprofile.website }}</a></p>
+<a href="{% url 'update_profile' %}">Update Profile</a>
